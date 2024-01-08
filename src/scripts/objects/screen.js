@@ -7,7 +7,7 @@ const screen = {
                                             <h1>${user.name ?? 'Não possui nome cadastrado 😢'}</h1>
                                             <p>${user.bio ?? 'Não possui bio cadastrada 😢'}</p>
                                             <p>${user.followers ? `💕 ${user.followers} seguidores` : 'Não possui informação sobre seguidores 😢'}</p>
-                                            <p>${user.following ? `💕 ${user.following} seguidores` : 'Não possui informação sobre seguindo 😢'}</p>
+                                            <p>${user.following ? `💕 ${user.following} seguindo` : 'Não possui informação sobre seguindo 😢'}</p>
                                         </div>
                                     </div>`
 
