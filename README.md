@@ -17,14 +17,14 @@ This project is a milestone of a FullStack developer course, serving to reinforc
 
 ### The challenge
 
-Users are able to enter information into the designated input field. Upon submitting, the information of an existing GitHub account will be loaded.
-The starting point of the challenge had already a basic structure with the HTML, styles and the JavaScript codes for the username and 10 first repositories of any user.
+Users have the ability to enter information into the designated input field. Upon submission, the information of an existing GitHub account will be loaded.
+The initial state of the challenge included a basic structure with HTML, styles, and JavaScript codes for the username and the user's first 10 repositories.
 
-Mine improvements should allow users be able to:
+My improvements allow users to:
 
-[x] See the number of followers and following from that user;
-[x] Show the last 10 events, but ONLY from Updated or Created repositories;
-[x] Bring more information from the repositories, such as how many stars, watchers, forks and what is the most relevant language.
+- [x] View the number of followers and individuals they are following;
+- [x] Display the user's last 10 events, but only from repositories that have been updated or created;
+- [x] Retrieve additional information from the repositories, such as the number of stars, watchers, forks, and the most commonly used language.
 
 
 ### 🔖 Layout
@@ -57,9 +57,9 @@ Mine improvements should allow users be able to:
 
 ### What I learned
 
-I have previous experience working on projects involving JavaScript, in this project, I explored another way of manipulating the document for the verification of an empty field and also the use of the "ENTER" button from the user's keyboard. 
-I think it is important to add that there is no need for authentication, the information is limited to whatever the user has deemed "public". There is a small verification for some missing data, such as the cases like users without a bio. Also there are 2 different ways of limiting the list of repositories to a maximum of 10, using the "?perpage" versus the "ifs, array.lenght,..."
-Another noteworthy point is that this code is structured to keep the fetch as a service and it's responses as objects, we can verify that this objects have their own functions that will allow for the render of the page.
+- I have prior experience working on projects involving JavaScript. In this project, I explored a different method of manipulating the document to verify if a field is empty, and also implemented the use of the "ENTER" button on the user's keyboard. 
+- It is important to note that there is no need for authentication, as the information accessed is limited to what the user has made public. There is a validation process for missing data, such as cases where users do not have a bio. Additionally, there are two different methods of limiting the list of repositories to a maximum of 10, either by using the "?per_page=" parameter or by using conditional statements and array length.
+- Another noteworthy aspect is that the code structure keeps the fetch call as a service and utilizes objects to handle its responses. These objects have their own functions that facilitate the rendering of the page.
 
 ```js
     document.getElementById('btn-search').addEventListener('click', () => {
