@@ -3,6 +3,7 @@ import { getRepositories } from "./services/repositories.js"
 import { getEvents } from "./services/events.js"
 import { events } from "./objects/events.js"
 import { user } from "./objects/user.js"
+import { repositories } from "./objects/repositories.js"
 import { screen } from "./objects/screen.js"
 
 document.getElementById('btn-search').addEventListener('click', () => {
@@ -33,15 +34,20 @@ async function getUserData(userName) {
     }
 
     const repositoriesResponse = await getRepositories(userName)
+    repositories.clearRepos(); // Clear existing repositories
+    repositoriesResponse.forEach(repo => {
+        repositories.addRepo(repo);
+    });
+
     const eventsResponse = await getEvents(userName);
     events.clearEvents(); // Clear existing events
     eventsResponse.forEach(event => {
         events.addEvent(event);
     });
     user.setInfo(userResponse)
-    user.setRepositories(repositoriesResponse)
+    user.setRepositories(repositories.list)
     user.setEventList(events.list)
-    console.log(events.list)
+    console.log(repositories.list)
     screen.renderUser(user)
     // screen.renderEvents(events.list);
 }

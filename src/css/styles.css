@@ -143,9 +143,20 @@ main {
   transition: 0.3s ease-in-out;
 }
 
+.container .profile-data .repositories ul li a span {
+  padding: 2px;
+  border: 1px solid transparent;
+  background-color : mediumPurple;  
+  border-radius: 5px;
+}
+
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
   color: #fff
+}
+
+.container .profile-data .repositories ul li a:hover span{
+  background-color:purple;
 }
 
 .container .profile-data.hide{

@@ -12,7 +12,7 @@ Continua com o desafio!
 
 Tarefas:
 [x] Mostrar followers e following;
-[ ] Event info;
-[ ] Emojis;
+[x] Event info;
+[x] Emojis;
 
 git inicial: https://github.com/devemdobro/projeto-inicial-fetch-github-api
